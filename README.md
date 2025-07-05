@@ -2,8 +2,6 @@
 
 **CoreFlex** is a modern, responsive Admin Dashboard template built with Bootstrap 5. It features a clean UI, modular components, and a scalable layout—perfect for ERP systems, CMS platforms, and eCommerce backends.
 
-![CoreFlex Screenshot](assets/images/ui/card-1.jpg)
-
 ---
 
 ## 🚀 Features

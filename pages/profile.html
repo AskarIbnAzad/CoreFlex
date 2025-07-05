@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile - Admin Dashboard</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/admin.css" />
+  </head>
+  <body class="admin-layout">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div
+        class="sidebar-header d-flex justify-content-center align-items-center"
+      >
+        <div class="logo-container d-none d-lg-block text-center">
+          <img
+            src="../assets/images/logo.jpg"
+            alt="Logo"
+            class="sidebar-logo"
+            style="width: 50px; border-radius: 10px"
+          />
+        </div>
+        <button class="toggle-btn d-lg-none position-absolute end-0 me-3">
+          <i class="bi bi-x"></i>
+        </button>
+      </div>
+      <ul class="sidebar-menu">
+        <li class="menu-item">
+          <a href="../index.html"
+            ><i class="bi bi-speedometer2"></i><span>Dashboard</span></a
+          >
+        </li>
+        <li class="menu-item">
+          <a href="register.html" target="_blank"
+            ><i class="bi bi-person-plus"></i><span>Registration</span></a
+          >
+        </li>
+        <li class="menu-item">
+          <a href="login.html" target="_blank"
+            ><i class="bi bi-box-arrow-in-right"></i><span>Login</span></a
+          >
+        </li>
+        <li class="menu-item">
+          <a href="404.html" target="_blank"
+            ><i class="bi bi-exclamation-circle"></i><span>404 Error</span></a
+          >
+        </li>
+        <li class="menu-item active">
+          <a href="profile.html"
+            ><i class="bi bi-person-circle"></i><span>Profile</span></a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+        <div class="container-fluid">
+          <button class="navbar-toggler me-2" type="button" id="sidebarToggle">
+            <i class="bi bi-list" style="color: black"></i>
+          </button>
+          <div class="mobile-logo-container d-lg-none mx-auto">
+            <img
+              src="../assets/images/logo.jpg"
+              alt="Logo"
+              class="mobile-logo"
+            />
+          </div>
+          <div class="d-flex align-items-center ms-auto" style="width: 150px">
+            <div class="dropdown">
+              <a
+                href="#"
+                class="dropdown-toggle text-black"
+                data-bs-toggle="dropdown"
+              >
+                <img
+                  src="../assets/images/askar.jpg"
+                  width="30px"
+                  style="border-radius: 15px; margin-right: 12px"
+                />
+                <span class="me-2">Askar Ib.</span>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="#">Profile</a></li>
+                <li><a class="dropdown-item" href="#">Settings</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#">Logout</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Profile Form -->
+      <main role="main" class="content-wrapper p-4">
+        <div class="container">
+          <div class="mb-4">
+            <h6 class="chart-title">Profile Setup</h6>
+          </div>
+          <form id="profileForm" class="row g-4">
+            <div class="col-md-6">
+              <label for="name" class="form-label">Full Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                value="Askar Ibn Azad"
+                required
+              />
+            </div>
+            <div class="col-md-6">
+              <label for="email" class="form-label">Email Address</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                value="askar@example.com"
+                required
+              />
+            </div>
+            <div class="col-md-6">
+              <label for="password" class="form-label">New Password</label>
+              <input
+                type="password"
+                class="form-control"
+                id="password"
+                placeholder="••••••••"
+              />
+            </div>
+            <div class="col-md-6">
+              <label for="profilePic" class="form-label">Profile Picture</label>
+              <input
+                class="form-control"
+                type="file"
+                id="profilePic"
+                accept="image/*"
+              />
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn btn-success">
+                <i class="bi bi-save me-1"></i> Save Changes
+              </button>
+            </div>
+          </form>
+        </div>
+      </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../assets/js/admin.js"></script>
+    <script>
+      document
+        .getElementById("profileForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          Swal.fire({
+            icon: "success",
+            title: "Profile Updated",
+            text: "Your changes have been saved successfully!",
+            confirmButtonColor: "#198754",
+          });
+        });
+    </script>
+  </body>
+</html>

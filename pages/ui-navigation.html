@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UI – Base Elements</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/admin.css" />
+  </head>
+  <body class="admin-layout">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div
+        class="sidebar-header d-flex justify-content-center align-items-center"
+      >
+        <div class="logo-container d-none d-lg-block text-center">
+          <img
+            src="../assets/images/logo.jpg"
+            alt="Logo"
+            class="sidebar-logo"
+            style="width: 50px; border-radius: 10px"
+          />
+        </div>
+        <button class="toggle-btn d-lg-none position-absolute end-0 me-3">
+          <i class="bi bi-x"></i>
+        </button>
+      </div>
+      <ul class="sidebar-menu">
+        <li class="menu-item">
+          <a href="../index.html"
+            ><i class="bi bi-speedometer2"></i><span>Dashboard</span></a
+          >
+        </li>
+        <li class="menu-item">
+          <a href="register.html" target="_blank"
+            ><i class="bi bi-person-plus"></i><span>Registration</span></a
+          >
+        </li>
+        <li class="menu-item">
+          <a href="login.html" target="_blank"
+            ><i class="bi bi-box-arrow-in-right"></i><span>Login</span></a
+          >
+        </li>
+        <li class="menu-item">
+          <a href="404.html" target="_blank"
+            ><i class="bi bi-exclamation-circle"></i><span>404 Error</span></a
+          >
+        </li>
+        <li class="menu-item">
+          <a href="profile.html" target="_blank"
+            ><i class="bi bi-person-circle"></i><span>Profile</span></a
+          >
+        </li>
+        <li class="menu-item active">
+          <a
+            href="#uiComponentsSubmenu"
+            data-bs-toggle="collapse"
+            role="button"
+            aria-expanded="true"
+          >
+            <i class="bi bi-ui-checks-grid"></i>
+            <span>UI Components</span>
+            <i class="bi bi-chevron-down ms-auto"></i>
+          </a>
+          <ul class="collapse show ps-3 child-menu" id="uiComponentsSubmenu">
+            <li class="menu-item">
+              <a href="ui-base.html" class="active" target="_self"
+                >Base Elements</a
+              >
+            </li>
+            <li class="menu-item">
+              <a href="ui-navigation.html" target="_self"
+                >Navigation & Layout</a
+              >
+            </li>
+            <li class="menu-item">
+              <a href="ui-interactive.html" target="_self"
+                >Interactive Components</a
+              >
+            </li>
+            <li class="menu-item">
+              <a href="ui-forms.html" target="_self">Forms & Inputs</a>
+            </li>
+            <li class="menu-item">
+              <a href="ui-display.html" target="_self">Content & Display</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+        <div class="container-fluid">
+          <button class="navbar-toggler me-2" type="button" id="sidebarToggle">
+            <i class="bi bi-list" style="color: black"></i>
+          </button>
+          <div class="mobile-logo-container d-lg-none mx-auto">
+            <img
+              src="../assets/images/logo.jpg"
+              alt="Logo"
+              class="mobile-logo"
+            />
+          </div>
+          <div class="d-flex align-items-center ms-auto" style="width: 150px">
+            <div class="dropdown">
+              <a
+                href="#"
+                class="dropdown-toggle text-black"
+                data-bs-toggle="dropdown"
+              >
+                <img
+                  src="../assets/images/askar.jpg"
+                  width="30px"
+                  style="border-radius: 15px; margin-right: 12px"
+                />
+                <span class="me-2">Askar Ib.</span>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="#">Profile</a></li>
+                <li><a class="dropdown-item" href="#">Settings</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#">Logout</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Page Content -->
+      <main role="main" class="content-wrapper p-4">
+        <div class="container">
+          <!-- Tabs -->
+          <h6 class="chart-title">Tabs</h6>
+          <ul class="nav nav-tabs mb-3" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link active"
+                id="home-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#home-tab-pane"
+                type="button"
+              >
+                Home
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="profile-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#profile-tab-pane"
+                type="button"
+              >
+                Profile
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="contact-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#contact-tab-pane"
+                type="button"
+              >
+                Contact
+              </button>
+            </li>
+          </ul>
+          <div class="tab-content mb-4" id="myTabContent">
+            <div
+              class="tab-pane fade show active p-3 border rounded"
+              id="home-tab-pane"
+            >
+              This is the Home tab content.
+            </div>
+            <div class="tab-pane fade p-3 border rounded" id="profile-tab-pane">
+              This is the Profile tab content.
+            </div>
+            <div class="tab-pane fade p-3 border rounded" id="contact-tab-pane">
+              This is the Contact tab content.
+            </div>
+          </div>
+
+          <!-- Pagination -->
+          <h6 class="chart-title mt-5">Pagination</h6>
+          <nav aria-label="Page navigation">
+            <ul class="pagination">
+              <li class="page-item disabled">
+                <a class="page-link" href="#">Previous</a>
+              </li>
+              <li class="page-item active">
+                <a class="page-link" href="#">1</a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item"><a class="page-link" href="#">Next</a></li>
+            </ul>
+          </nav>
+
+          <!-- Collapse -->
+          <h6 class="chart-title mt-5">Collapse</h6>
+          <p>
+            <a
+              class="btn btn-outline-secondary"
+              data-bs-toggle="collapse"
+              href="#collapseExample"
+              role="button"
+              aria-expanded="false"
+            >
+              Toggle Content
+            </a>
+          </p>
+          <div class="collapse mb-4" id="collapseExample">
+            <div class="card card-body">
+              This content is hidden by default and revealed on toggle.
+            </div>
+          </div>
+
+          <!-- Accordion -->
+          <h6 class="chart-title mt-5">Accordion</h6>
+          <div class="accordion mb-4" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button
+                  class="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne"
+                >
+                  Accordion Item #1
+                </button>
+              </h2>
+              <div
+                id="collapseOne"
+                class="accordion-collapse collapse show"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  This is the first item's accordion body.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo"
+                >
+                  Accordion Item #2
+                </button>
+              </h2>
+              <div
+                id="collapseTwo"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  This is the second item's accordion body.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Breadcrumbs -->
+          <h6 class="chart-title mt-5">Breadcrumbs</h6>
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item"><a href="#">Library</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Data</li>
+            </ol>
+          </nav>
+        </div>
+      </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/admin.js"></script>
+  </body>
+</html>

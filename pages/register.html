@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register - Admin Dashboard</title>
+    <link rel="icon" type="image/x-icon" href="../assets/images/R_Small.png" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-color: #a38b69;
+      }
+      .toggle-icon:hover {
+        color: rgba(0, 123, 255, 0.8);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Registration Section -->
+    <section class="vh-100">
+      <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col col-xl-10">
+            <div class="card" style="border-radius: 1rem">
+              <div class="row g-0">
+                <!-- Left Image -->
+                <div class="col-md-6 col-lg-5 d-none d-md-block">
+                  <img
+                    src="../assets/images/11.jpg"
+                    alt="register form"
+                    class="img-fluid"
+                    style="border-radius: 1rem 0 0 1rem"
+                  />
+                </div>
+
+                <!-- Registration Form -->
+                <div class="col-md-6 col-lg-7 d-flex align-items-center">
+                  <div class="card-body p-4 p-lg-5 text-black">
+                    <form method="post" action="/Account/Register">
+                      <h5
+                        class="fw-normal mb-3 pb-3"
+                        style="letter-spacing: 1px"
+                      >
+                        Register your account
+                      </h5>
+
+                      <div class="form-outline mb-4">
+                        <input
+                          type="text"
+                          name="username"
+                          class="form-control form-control-lg"
+                          required
+                        />
+                        <label class="form-label">Username</label>
+                      </div>
+
+                      <div class="form-outline mb-4">
+                        <input
+                          type="email"
+                          name="email"
+                          class="form-control form-control-lg"
+                          required
+                        />
+                        <label class="form-label">Email address</label>
+                      </div>
+
+                      <div class="form-outline mb-4 position-relative">
+                        <input
+                          type="password"
+                          id="password"
+                          name="password"
+                          class="form-control form-control-lg"
+                          required
+                        />
+                        <label class="form-label">Password</label>
+                        <span
+                          class="position-absolute toggle-icon"
+                          style="top: 12px; right: 15px; cursor: pointer"
+                          onclick="togglePassword('password', 'eyeIcon1')"
+                        >
+                          <i id="eyeIcon1" class="fas fa-eye"></i>
+                        </span>
+                      </div>
+
+                      <div class="form-outline mb-4 position-relative">
+                        <input
+                          type="password"
+                          id="confirmPassword"
+                          name="confirmPassword"
+                          class="form-control form-control-lg"
+                          required
+                        />
+                        <label class="form-label">Confirm Password</label>
+                        <span
+                          class="position-absolute toggle-icon"
+                          style="top: 12px; right: 15px; cursor: pointer"
+                          onclick="togglePassword('confirmPassword', 'eyeIcon2')"
+                        >
+                          <i id="eyeIcon2" class="fas fa-eye"></i>
+                        </span>
+                      </div>
+
+                      <div class="pt-1 mb-4">
+                        <button
+                          class="btn btn-dark btn-lg btn-block w-100"
+                          type="submit"
+                        >
+                          Register
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <!-- End Registration Form -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      function togglePassword(inputId, iconId) {
+        const input = document.getElementById(inputId);
+        const icon = document.getElementById(iconId);
+        if (input.type === "password") {
+          input.type = "text";
+          icon.classList.remove("fa-eye");
+          icon.classList.add("fa-eye-slash");
+        } else {
+          input.type = "password";
+          icon.classList.remove("fa-eye-slash");
+          icon.classList.add("fa-eye");
+        }
+      }
+    </script>
+  </body>
+</html>

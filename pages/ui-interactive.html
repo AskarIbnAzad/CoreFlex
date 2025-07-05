@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UI – Base Elements</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/admin.css" />
+  </head>
+  <body class="admin-layout">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div
+        class="sidebar-header d-flex justify-content-center align-items-center"
+      >
+        <div class="logo-container d-none d-lg-block text-center">
+          <img
+            src="../assets/images/logo.jpg"
+            alt="Logo"
+            class="sidebar-logo"
+            style="width: 50px; border-radius: 10px"
+          />
+        </div>
+        <button class="toggle-btn d-lg-none position-absolute end-0 me-3">
+          <i class="bi bi-x"></i>
+        </button>
+      </div>
+      <ul class="sidebar-menu">
+        <li class="menu-item">
+          <a href="../index.html"
+            ><i class="bi bi-speedometer2"></i><span>Dashboard</span></a
+          >
+        </li>
+        <li class="menu-item">
+          <a href="register.html" target="_blank"
+            ><i class="bi bi-person-plus"></i><span>Registration</span></a
+          >
+        </li>
+        <li class="menu-item">
+          <a href="login.html" target="_blank"
+            ><i class="bi bi-box-arrow-in-right"></i><span>Login</span></a
+          >
+        </li>
+        <li class="menu-item">
+          <a href="404.html" target="_blank"
+            ><i class="bi bi-exclamation-circle"></i><span>404 Error</span></a
+          >
+        </li>
+        <li class="menu-item">
+          <a href="profile.html" target="_blank"
+            ><i class="bi bi-person-circle"></i><span>Profile</span></a
+          >
+        </li>
+        <li class="menu-item active">
+          <a
+            href="#uiComponentsSubmenu"
+            data-bs-toggle="collapse"
+            role="button"
+            aria-expanded="true"
+          >
+            <i class="bi bi-ui-checks-grid"></i>
+            <span>UI Components</span>
+            <i class="bi bi-chevron-down ms-auto"></i>
+          </a>
+          <ul class="collapse show ps-3 child-menu" id="uiComponentsSubmenu">
+            <li class="menu-item">
+              <a href="ui-base.html" class="active" target="_self"
+                >Base Elements</a
+              >
+            </li>
+            <li class="menu-item">
+              <a href="ui-navigation.html" target="_self"
+                >Navigation & Layout</a
+              >
+            </li>
+            <li class="menu-item">
+              <a href="ui-interactive.html" target="_self"
+                >Interactive Components</a
+              >
+            </li>
+            <li class="menu-item">
+              <a href="ui-forms.html" target="_self">Forms & Inputs</a>
+            </li>
+            <li class="menu-item">
+              <a href="ui-display.html" target="_self">Content & Display</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+        <div class="container-fluid">
+          <button class="navbar-toggler me-2" type="button" id="sidebarToggle">
+            <i class="bi bi-list" style="color: black"></i>
+          </button>
+          <div class="mobile-logo-container d-lg-none mx-auto">
+            <img
+              src="../assets/images/logo.jpg"
+              alt="Logo"
+              class="mobile-logo"
+            />
+          </div>
+          <div class="d-flex align-items-center ms-auto" style="width: 150px">
+            <div class="dropdown">
+              <a
+                href="#"
+                class="dropdown-toggle text-black"
+                data-bs-toggle="dropdown"
+              >
+                <img
+                  src="../assets/images/askar.jpg"
+                  width="30px"
+                  style="border-radius: 15px; margin-right: 12px"
+                />
+                <span class="me-2">Askar Ib.</span>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="#">Profile</a></li>
+                <li><a class="dropdown-item" href="#">Settings</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#">Logout</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Page Content -->
+      <main role="main" class="content-wrapper p-4">
+        <div class="container">
+          <!-- Modals -->
+          <h6 class="chart-title">Modals</h6>
+          <button
+            type="button"
+            class="btn btn-dark mb-4"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+          >
+            Launch Modal
+          </button>
+
+          <div
+            class="modal fade"
+            id="exampleModal"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">
+                    Modal Title
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  This is a Bootstrap modal. You can place any content here,
+                  like forms, alerts, or charts.
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                  <button type="button" class="btn btn-primary">
+                    Save changes
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Toasts -->
+          <h6 class="chart-title mt-5">Toasts</h6>
+          <button class="btn btn-info mb-3" onclick="showToast()">
+            Show Toast
+          </button>
+          <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+            <div
+              id="liveToast"
+              class="toast align-items-center text-bg-primary border-0"
+              role="alert"
+              aria-live="assertive"
+              aria-atomic="true"
+            >
+              <div class="d-flex">
+                <div class="toast-body">This is a toast message!</div>
+                <button
+                  type="button"
+                  class="btn-close btn-close-white me-2 m-auto"
+                  data-bs-dismiss="toast"
+                ></button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tooltips -->
+          <h6 class="chart-title mt-5">Tooltips</h6>
+          <div class="mb-4">
+            <button
+              type="button"
+              class="btn btn-secondary me-2"
+              data-bs-toggle="tooltip"
+              data-bs-placement="top"
+              title="Tooltip on top"
+            >
+              Hover me (top)
+            </button>
+            <button
+              type="button"
+              class="btn btn-secondary me-2"
+              data-bs-toggle="tooltip"
+              data-bs-placement="right"
+              title="Tooltip on right"
+            >
+              Hover me (right)
+            </button>
+            <button
+              type="button"
+              class="btn btn-secondary me-2"
+              data-bs-toggle="tooltip"
+              data-bs-placement="bottom"
+              title="Tooltip on bottom"
+            >
+              Hover me (bottom)
+            </button>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-toggle="tooltip"
+              data-bs-placement="left"
+              title="Tooltip on left"
+            >
+              Hover me (left)
+            </button>
+          </div>
+
+          <!-- Popovers -->
+          <h6 class="chart-title mt-5">Popovers</h6>
+          <div class="mb-4">
+            <button
+              type="button"
+              class="btn btn-outline-primary me-2"
+              data-bs-toggle="popover"
+              title="Popover title"
+              data-bs-content="This is the popover body."
+            >
+              Click for Popover
+            </button>
+            <button
+              type="button"
+              class="btn btn-outline-success"
+              data-bs-toggle="popover"
+              data-bs-placement="right"
+              title="Right Popover"
+              data-bs-content="Popover on the right."
+            >
+              Right Popover
+            </button>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/admin.js"></script>
+    <script>
+      // Toast trigger
+      function showToast() {
+        const toast = new bootstrap.Toast(document.getElementById("liveToast"));
+        toast.show();
+      }
+
+      // Initialize tooltips and popovers
+      document.addEventListener("DOMContentLoaded", function () {
+        const tooltipTriggerList = [].slice.call(
+          document.querySelectorAll('[data-bs-toggle="tooltip"]')
+        );
+        tooltipTriggerList.forEach((el) => new bootstrap.Tooltip(el));
+
+        const popoverTriggerList = [].slice.call(
+          document.querySelectorAll('[data-bs-toggle="popover"]')
+        );
+        popoverTriggerList.forEach((el) => new bootstrap.Popover(el));
+      });
+    </script>
+  </body>
+</html>

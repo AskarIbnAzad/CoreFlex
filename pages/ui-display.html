@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UI – Base Elements</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/admin.css" />
+  </head>
+  <body class="admin-layout">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div
+        class="sidebar-header d-flex justify-content-center align-items-center"
+      >
+        <div class="logo-container d-none d-lg-block text-center">
+          <img
+            src="../assets/images/logo.jpg"
+            alt="Logo"
+            class="sidebar-logo"
+            style="width: 50px; border-radius: 10px"
+          />
+        </div>
+        <button class="toggle-btn d-lg-none position-absolute end-0 me-3">
+          <i class="bi bi-x"></i>
+        </button>
+      </div>
+      <ul class="sidebar-menu">
+        <li class="menu-item">
+          <a href="../index.html"
+            ><i class="bi bi-speedometer2"></i><span>Dashboard</span></a
+          >
+        </li>
+        <li class="menu-item">
+          <a href="register.html" target="_blank"
+            ><i class="bi bi-person-plus"></i><span>Registration</span></a
+          >
+        </li>
+        <li class="menu-item">
+          <a href="login.html" target="_blank"
+            ><i class="bi bi-box-arrow-in-right"></i><span>Login</span></a
+          >
+        </li>
+        <li class="menu-item">
+          <a href="404.html" target="_blank"
+            ><i class="bi bi-exclamation-circle"></i><span>404 Error</span></a
+          >
+        </li>
+        <li class="menu-item">
+          <a href="profile.html" target="_blank"
+            ><i class="bi bi-person-circle"></i><span>Profile</span></a
+          >
+        </li>
+        <li class="menu-item active">
+          <a
+            href="#uiComponentsSubmenu"
+            data-bs-toggle="collapse"
+            role="button"
+            aria-expanded="true"
+          >
+            <i class="bi bi-ui-checks-grid"></i>
+            <span>UI Components</span>
+            <i class="bi bi-chevron-down ms-auto"></i>
+          </a>
+          <ul class="collapse show ps-3 child-menu" id="uiComponentsSubmenu">
+            <li class="menu-item">
+              <a href="ui-base.html" class="active" target="_self"
+                >Base Elements</a
+              >
+            </li>
+            <li class="menu-item">
+              <a href="ui-navigation.html" target="_self"
+                >Navigation & Layout</a
+              >
+            </li>
+            <li class="menu-item">
+              <a href="ui-interactive.html" target="_self"
+                >Interactive Components</a
+              >
+            </li>
+            <li class="menu-item">
+              <a href="ui-forms.html" target="_self">Forms & Inputs</a>
+            </li>
+            <li class="menu-item">
+              <a href="ui-display.html" target="_self">Content & Display</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+        <div class="container-fluid">
+          <button class="navbar-toggler me-2" type="button" id="sidebarToggle">
+            <i class="bi bi-list" style="color: black"></i>
+          </button>
+          <div class="mobile-logo-container d-lg-none mx-auto">
+            <img
+              src="../assets/images/logo.jpg"
+              alt="Logo"
+              class="mobile-logo"
+            />
+          </div>
+          <div class="d-flex align-items-center ms-auto" style="width: 150px">
+            <div class="dropdown">
+              <a
+                href="#"
+                class="dropdown-toggle text-black"
+                data-bs-toggle="dropdown"
+              >
+                <img
+                  src="../assets/images/askar.jpg"
+                  width="30px"
+                  style="border-radius: 15px; margin-right: 12px"
+                />
+                <span class="me-2">Askar Ib.</span>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="#">Profile</a></li>
+                <li><a class="dropdown-item" href="#">Settings</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#">Logout</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Page Content -->
+      <main role="main" class="content-wrapper p-4">
+        <div class="container">
+          <!-- Cards -->
+          <h6 class="chart-title">Cards</h6>
+          <div class="row g-4 mb-4">
+            <div class="col-md-6 col-lg-4">
+              <div class="card">
+                <img
+                  src="https://via.placeholder.com/400x200"
+                  class="card-img-top"
+                  alt="Card image"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Card Title</h5>
+                  <p class="card-text">
+                    This is a simple card with image and text content.
+                  </p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="card text-white bg-dark">
+                <div class="card-body">
+                  <h5 class="card-title">Dark Card</h5>
+                  <p class="card-text">
+                    This card uses a dark background for contrast.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tables -->
+          <h6 class="chart-title mt-5">Tables</h6>
+          <div class="table-responsive mb-4">
+            <table class="table table-bordered table-striped">
+              <thead class="table-dark">
+                <tr>
+                  <th>#</th>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Askar</td>
+                  <td>askar@example.com</td>
+                  <td><span class="badge bg-success">Active</span></td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>John</td>
+                  <td>john@example.com</td>
+                  <td><span class="badge bg-danger">Inactive</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- List Groups -->
+          <h6 class="chart-title mt-5">List Groups</h6>
+          <ul class="list-group mb-4">
+            <li class="list-group-item active">Active item</li>
+            <li class="list-group-item">Second item</li>
+            <li class="list-group-item">Third item</li>
+          </ul>
+
+          <!-- Dropdowns -->
+          <h6 class="chart-title mt-5">Dropdowns</h6>
+          <div class="dropdown mb-4">
+            <button
+              class="btn btn-secondary dropdown-toggle"
+              type="button"
+              data-bs-toggle="dropdown"
+            >
+              Dropdown Button
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><hr class="dropdown-divider" /></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </div>
+
+          <!-- Carousel -->
+          <h6 class="chart-title mt-5">Carousel</h6>
+          <div
+            id="carouselExample"
+            class="carousel slide mb-4"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  src="https://via.placeholder.com/800x300"
+                  class="d-block w-100"
+                  alt="Slide 1"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="https://via.placeholder.com/800x300"
+                  class="d-block w-100"
+                  alt="Slide 2"
+                />
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExample"
+              data-bs-slide="prev"
+            >
+              <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExample"
+              data-bs-slide="next"
+            >
+              <span class="carousel-control-next-icon"></span>
+            </button>
+          </div>
+
+          <!-- Progress Bars -->
+          <h6 class="chart-title mt-5">Progress Bars</h6>
+          <div class="mb-4">
+            <div class="progress mb-2">
+              <div class="progress-bar" style="width: 25%">25%</div>
+            </div>
+            <div class="progress mb-2">
+              <div class="progress-bar bg-success" style="width: 50%">50%</div>
+            </div>
+            <div class="progress mb-2">
+              <div class="progress-bar bg-warning" style="width: 75%">75%</div>
+            </div>
+            <div class="progress">
+              <div class="progress-bar bg-danger" style="width: 100%">100%</div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/admin.js"></script>
+  </body>
+</html>
